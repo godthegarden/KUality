@@ -1,11 +1,11 @@
-#pragma warning(disable:4996)
+ï»¿#pragma warning(disable:4996)
 #pragma warning(disable:6031)
 #include <stdio.h>
 
 int main()
 {
 	int num;
-	printf("ÇÐ¹øÀ» ÀÔ·ÂÇÏ¼¼¿ä >> ");
+	printf("í•™ë²ˆì„ ìž…ë ¥í•˜ì„¸ìš” >> ");
 	scanf("%d", &num);
-	printf("ÇÐ¹ø: %d", num);
+	printf("í•™ë²ˆ: %d", num);
 }
