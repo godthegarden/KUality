@@ -37,7 +37,7 @@ int main()
 
 		case 4:
 			printf("프로그램을 종료합니다.\n");
-			return 1;
+			return 0;
 
 		default:
 			printf("번호를 잘못 선택하셨습니다. \n");
