@@ -7,7 +7,7 @@ int main()
 	double tot=0, sum = 0;
 	char grade[10];
 
-	printf("[학점 프로그램]\n");
+	printf("[Grade program]\n");
 	printf("Total number of subjects? ");
 	scanf(" %d", &sub);
 
