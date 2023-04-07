@@ -1,7 +1,7 @@
 #pragma warning(disable:4996)
 #pragma warning(disable:6031)
 #include <stdio.h>
-char *product[6] = { " ", "코카콜라", "스프라이트", "데미소다", "아이스티", "과일주스" };
+
 int money, tot_price, ch;
 
 int main()
@@ -37,13 +37,13 @@ int main()
 
 		case 4:
 			printf("프로그램을 종료합니다.\n");
-			return 0;
-
+			break;
 		default:
 			printf("번호를 잘못 선택하셨습니다. \n");
 		}
 
-	} while (num != 4);
+	} while (num != 4); 
+	return 0;
 }
 
 int amount(void)
@@ -58,6 +58,7 @@ int amount(void)
 		}
 
 	} while (tot_price > money);
+	printf("잔돈 반환 메뉴로 이동하세요\n");
 	main();
 }
 
@@ -66,7 +67,8 @@ int change(void)
 	printf("잔돈 반환 중 입니다... 잠시만 기다려 주세요!\n");
 	ch =  money - tot_price;
 	printf("잔돈: %d\n", ch);
-	
+	printf("구매해주셔서 감사합니다.");
+	return 0;
 }
 
 int drink(void)
@@ -76,16 +78,12 @@ int drink(void)
 	int am[6] = { 0 };
 	int inventory[6] = { 0, 20, 20, 20, 20, 20 };
 	int price[6] = { 0, 1500, 1500, 1200, 1000, 3000 };
+
 	do
 	{
 		printf("\n");
-		printf("=======상품 메뉴======= \n");
-
-		for (int i = 1; i < 6; i++)
-		{
-			printf("%d. %-10s %5d 원 \n", i, product[i], price[i]);
-		}
-		printf("======================= \n");
+		printf("[상품 메뉴] \n");
+		printf("1.코카콜라[1500] 2.스프라이트[1500] 3.데미소다[1200] 4.아이스티[1000] 5.과일주스[3000]\n");
 
 		do
 		{
@@ -97,8 +95,28 @@ int drink(void)
 
 		} while (num > 5 || num <= 0);
 
-		printf("%s 를 선택하셨습니다. \n", product[num]);
-		printf("%d 원 입니다. \n", price[num]);
+		switch(num) {
+		case 1:
+			printf("코가콜라를 선택하셨습니다.\n");
+			printf("%d 원 입니다. \n", price[num]);
+			break;
+		case 2:
+			printf("스프라이트를 선택하셨습니다.\n");
+			printf("%d 원 입니다. \n", price[num]);
+			break;
+		case 3:
+			printf("데미소다를 선택하셨습니다.\n");
+			printf("%d 원 입니다. \n", price[num]);
+			break;
+		case 4:
+			printf("아이스티를 선택하셨습니다.\n");
+			printf("%d 원 입니다. \n", price[num]);
+			break;
+		case 5:
+			printf("과일주스를 선택하셨습니다.\n");
+			printf("%d 원 입니다. \n", price[num]);
+			break;
+		}
 		printf("\n");
 
 		do                                   
